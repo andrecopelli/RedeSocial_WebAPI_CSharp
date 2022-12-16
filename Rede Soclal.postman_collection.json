@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "df938061-3c57-4139-ae56-2ff3b6eccef9",
+		"name": "Rede Soclal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23206520"
+	},
+	"item": [
+		{
+			"name": "GetPublicacaoPorID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Publicacao/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Publicacao",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPublicacao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 6,\r\n    \"DataPublicacao\" : \"2022-09-10\",\r\n    \"Titulo\" : \"Nova publicação inserida.\",\r\n    \"Usuario\" : \"Usuário Teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Publicacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Publicacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchPublicacaoData",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"DataPublicacao\" : \"2022-09-11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Publicacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Publicacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchPublicacaoCurtida",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Publicacao/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Publicacao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePublicacao",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Publicacao/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Publicacao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostComentario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 11,\r\n    \"Descricao\" : \"Novo comentario inserido.\",\r\n    \"DataComentario\" : \"2022-09-05\",\r\n    \"Usuario\" : \"Usuário Teste\",\r\n    \"PublicacaoId\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Comentario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Comentario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComentarioPorPublicacao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Comentario/porpublicacao/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Comentario",
+						"porpublicacao",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComentarioPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Comentario/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Comentario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchComentarioCurtido",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Comentario/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Comentario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteComentario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Comentario/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Comentario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
